@@ -1,0 +1,6 @@
+<% if @user.errors.any? %>
+<div class="bg-red-lightest border border-red-light text-red-dark pl-4 pr-8 py-3 rounded relative" role="alert">
+  <strong class="font-bold">Brbrbr!</strong>
+  <span class="block sm:inline">The form contains <%= pluralize(@user.errors.count, "error") %></span>
+</div>
+<%end%>

@@ -1,0 +1,28 @@
+<% provide(:title, @user.name) %>
+<div class="bg-white my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg shadow-sm mx-auto">
+  <div class="relative h-40">
+    <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1448932133140-b4045783ed9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80">
+  </div>
+  <div class="relative shadow mx-auto h-24 w-24 -my-12 border-white rounded-full overflow-hidden border-4">
+    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80">
+  </div>
+  <div class="mt-16">
+    <h1 class="text-lg text-center font-semibold">
+      <%=@user.name %>
+    </h1>
+    <h1 class="text-lg text-center font-semibold">
+      <%=@user.email %>
+    </h1>
+  </div>
+  <h3 class="text-center">Microposts (<%= @user.microposts.count %>)</h3>
+  <div class="flex flex-wrap mt-12 justify-center">
+    <% if @user.microposts.any? %>
+    <div class="grid grid-cols-1 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 gap-4">
+        <%= render @microposts %>
+    </div>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
+
+
