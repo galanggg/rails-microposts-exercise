@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#vendor
+
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'faker', '2.11.0'
 gem 'will_paginate', '3.3.0'
